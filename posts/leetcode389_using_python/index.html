@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="furryUp">
+    <meta name="description" content="Example article description">
+    <meta name="keywords" content="blog,developer,personal,trading">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LeetCode389_Using_Python"/>
+<meta name="twitter:description" content="Example article description"/>
+
+    <meta property="og:title" content="LeetCode389_Using_Python" />
+<meta property="og:description" content="Example article description" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hirrochi0211.github.io/posts/leetcode389_using_python/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-30T23:56:51+09:00" />
+<meta property="article:modified_time" content="2022-03-30T23:56:51+09:00" />
+
+
+
+    <title>
+  LeetCode389_Using_Python · A Stock trading liking programmer 
+</title>
+
+    
+      <link rel="canonical" href="https://hirrochi0211.github.io/posts/leetcode389_using_python/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css" integrity="sha256-2f3b/&#43;byfmmYXcX&#43;BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css" integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.96.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      A Stock trading liking programmer 
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/gcp/">Gcp</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/Java/">Java</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/python/">Python</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://hirrochi0211.github.io/posts/leetcode389_using_python/">
+              LeetCode389_Using_Python
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2022-03-30T23:56:51&#43;09:00">
+                March 30, 2022
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              One-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/algorithm/">Algorithm</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/algo/">algo</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <h1 id="問題文">
+  問題文
+  <a class="heading-link" href="#%e5%95%8f%e9%a1%8c%e6%96%87">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>問題文はそのままコピーします。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>You are given two strings s and t.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>String t is generated by random shuffling string s and then add one more letter at a random position.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Return the letter that was added to t.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Example 1:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input: s = &#34;abcd&#34;, t = &#34;abcde&#34;
+</span></span><span style="display:flex;"><span>Output: &#34;e&#34;
+</span></span><span style="display:flex;"><span>Explanation: &#39;e&#39; is the letter that was added.
+</span></span><span style="display:flex;"><span>Example 2:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input: s = &#34;&#34;, t = &#34;y&#34;
+</span></span><span style="display:flex;"><span>Output: &#34;y&#34;
+</span></span><span style="display:flex;"><span>Example 3:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input: s = &#34;a&#34;, t = &#34;aa&#34;
+</span></span><span style="display:flex;"><span>Output: &#34;a&#34;
+</span></span><span style="display:flex;"><span>Example 4:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input: s = &#34;ae&#34;, t = &#34;aea&#34;
+</span></span><span style="display:flex;"><span>Output: &#34;a&#34;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Constraints:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>0 <span style="">&lt;</span>= s.length <span style="">&lt;</span>= 1000
+</span></span><span style="display:flex;"><span>t.length == s.length + 1
+</span></span><span style="display:flex;"><span>s and t consist of lower-case English letters.
+</span></span></code></pre></div><p>Exampleのように、<code>s = 'ae'</code>, <code>t='aea'</code>の時、この<code>t</code>配列の<code>a</code>をoutputしたいのことです。</p>
+<p>簡単だと思いますが、ある特別な方法をシェアしたいと思っています。</p>
+<h1 id="解き方">
+  解き方
+  <a class="heading-link" href="#%e8%a7%a3%e3%81%8d%e6%96%b9">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>この問題に対して、最初に思いついた方法はfor文でループして、dictを2つ使ってそれぞれ配列の要素をcountするだと思います。</p>
+<p>だが！もっと面白い解き方があります！</p>
+<p>pythonの組み込み関数の<code>ord()</code>と<code>chr()</code>を使って、listのみで問題を解決できます！</p>
+<p>では！コードを載ります。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold">class</span> <span style="font-weight:bold">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">def</span> findTheDifference(self, s: str, t: str) -&gt; str:
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">if</span> len(s) == 0:
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">return</span> t
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        table = [0] * 26
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">for</span> i <span style="font-weight:bold">in</span> range(len(t)):
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">if</span> i &lt; len(s):
+</span></span><span style="display:flex;"><span>                table[ord(s[i]) - ord(<span style="font-style:italic">&#39;a&#39;</span>)] -= 1
+</span></span><span style="display:flex;"><span>            table[ord(t[i]) - ord(<span style="font-style:italic">&#39;a&#39;</span>)] += 1
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">for</span> i <span style="font-weight:bold">in</span> range(26):
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">if</span> table[i] != 0:
+</span></span><span style="display:flex;"><span>                <span style="font-weight:bold">return</span> chr(i + 97)
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> <span style="font-style:italic">&#39;a&#39;</span>
+</span></span></code></pre></div><p>1行目と2行目はleetcode上のコードなので、基本は無視しても大丈夫です。</p>
+<p>最初はif文で、配列<code>s</code>がもしなにも入っていないなら、そのまま配列<code>t</code>が戻ります。</p>
+<p>そして、if文が成り立っていない場合、26個の要素が含まれている配列を作成します。</p>
+<p>続いて、for文はややこしいなので、図に合わせて説明します。
+<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1729963/c44ab729-1f90-e00c-ba22-69d8be586289.png" alt="image.png"></p>
+<p>例えば、上の配列は<code>s</code>, 下は配列<code>t</code>とします。この2つの配列に対して、同時にfor文を掛けます。最初に出てきたのは配列<code>s</code>の<code>a</code>です。この時、countを-1にします。続いて、配列<code>t</code>の最初の要素は<code>b</code>で、countを+1にします。2回目に入って、配列<code>s</code>の<code>b</code>のcountを-1にし、配列<code>t</code>の<code>c</code>の countを+1にします。<strong>ここで、2つの配列にある要素<code>b</code>のcountを思い出してください！、-1, +1で0になります！</strong>。そのあとは同じのことを繰り返し、最後は必ずどっちかの要素が1になります。私たちはこの0ではない要素を探せばよいです。</p>
+<p>って、<code>ord</code>と<code>chr</code>はなんやろと思うかもしれませんが、簡単です！indexを設定することです。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(ord(<span style="font-style:italic">&#39;a&#39;</span>))
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 97
+</span></span></code></pre></div><p>文字列<code>a</code>を数値に変化することです。一方、<code>chr</code>は数値を文字列に変換することです。</p>
+<p><code>ord(s[i]) - ord('a')</code>こうやって書く理由として、私たち先作った26個要素が含まれている配列があるではないですか。<code>ord</code>で変換すると26を超えてしまったので、ようするにindex <code>0,1,2,3,4...</code>を作るためです。</p>
+<p>これでfor文は終了し、最後は<code>count != 0</code>の要素を探せてreturnしたら良いです。</p>
+<h1 id="参考">
+  参考
+  <a class="heading-link" href="#%e5%8f%82%e8%80%83">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p><a href="https://leetcode.com/problems/find-the-difference/">https://leetcode.com/problems/find-the-difference/</a></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     furryUp 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js" integrity="sha256-j7hjdqFuaEr0cqMprvUC2&#43;vPq2XOJk6XUNFEkSlHxgI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

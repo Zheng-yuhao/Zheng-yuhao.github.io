@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on A Stock trading liking programmer </title>
+    <link>https://hirrochi0211.github.io/about/</link>
+    <description>Recent content in Abouts on A Stock trading liking programmer </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hirrochi0211.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://hirrochi0211.github.io/about/about/</link>
+      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://hirrochi0211.github.io/about/about/</guid>
+      <description>&lt;p&gt;Welcome to my personal blog. This blog will be updated with some technical articles from time to time. It contains &lt;strong&gt;algorithms&lt;/strong&gt;, &lt;strong&gt;java&lt;/strong&gt;, &lt;strong&gt;python&lt;/strong&gt;, and &lt;strong&gt;solutions to errors&lt;/strong&gt; encountered in real work.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
